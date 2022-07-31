@@ -213,17 +213,6 @@ public class Main {
                 playerTurn--;
             }
         }
-/*
-        //The first shot in Fog of War
-        System.out.println("The game starts!");
-        board.printFogBoard();
-        while (!board.isGameOver()) {
-            System.out.println("Take a shot!");
-            String input = scanner.nextLine().trim();
-            if (!isCheckInput(input)) continue;
-            board.shotAt(input);
-        }
-        System.out.println("You sank the last ship. You won. Congratulations!");*/
     }
 
 
@@ -271,8 +260,11 @@ public class Main {
         System.out.println("Press Enter and pass the move to another player");
         try {
             System.in.read();
+            for (int i = 0; i < 50; ++i) System.out.print("\r\n");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
 }
